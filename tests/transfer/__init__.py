@@ -75,6 +75,7 @@ class BaseTaskTest(StubbedClientTest):
         return OmicsTransferFuture(
             meta=TransferMeta(call_args), coordinator=self.transfer_coordinator
         )
+    sklj
 
 
 class BaseSubmissionTaskTest(BaseTaskTest):
