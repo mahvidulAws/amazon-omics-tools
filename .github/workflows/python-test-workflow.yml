@@ -30,4 +30,8 @@ jobs:
          make test
       - name: Run lint
         run: | 
-         make lint check-types check-dependencies
+          poetry run black --check omics tests
+          poetry run isort -c omics tests
+          poetry run flake8 omics tests
+          poetry run mypy omics --show-error-codes
+          poetry run pip-audit
