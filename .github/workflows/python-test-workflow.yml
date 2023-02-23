@@ -25,6 +25,9 @@ jobs:
       - name: lint fix
         run: | 
          make lint-fix
-      - name: Run all checks (test, lint, check-types, check-dependencies)
+      - name: Run tests
         run: | 
-         make ci
+         make test
+      - name: Run lint
+        run: | 
+         make lint check-types check-dependencies
