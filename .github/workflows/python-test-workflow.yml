@@ -23,6 +23,7 @@ jobs:
           make install
           pip install boto3-stubs
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          make ci
       - name: lint fix
         run: | 
          make lint-fix
