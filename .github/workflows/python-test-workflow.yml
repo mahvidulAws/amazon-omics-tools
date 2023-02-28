@@ -22,6 +22,7 @@ jobs:
           python -m pip install poetry
           make install
           pip install boto3-stubs
+          pip install botocore-stubs
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           make ci
       - name: lint fix
