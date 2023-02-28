@@ -30,4 +30,5 @@ jobs:
          make test
       - name: Run lint
         run: | 
+          mypy --show-error-context your_module.py
           make lint
