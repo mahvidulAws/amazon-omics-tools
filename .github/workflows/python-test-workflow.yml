@@ -24,13 +24,12 @@ jobs:
           pip install boto3-stubs
           pip install botocore-stubs
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          make ci
       - name: lint fix
         run: | 
          make lint-fix
-      - name: Run tests
-        run: | 
-         make test
       - name: Run lint
         run: | 
           make lint
+      - name: Run lint tests
+        run: | 
+         make test
