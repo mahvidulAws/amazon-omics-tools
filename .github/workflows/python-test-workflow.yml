@@ -21,6 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
           make install
+          mypy --show-error-context your_module.py
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: lint fix
         run: | 
@@ -30,5 +31,4 @@ jobs:
          make test
       - name: Run lint
         run: | 
-          mypy --show-error-context your_module.py
           make lint
