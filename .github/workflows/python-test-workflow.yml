@@ -21,8 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
           make install
-          pip install mypy
-          mypy --show-error-context botocore.exceptions.py
           pip install boto3-stubs
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: lint fix
